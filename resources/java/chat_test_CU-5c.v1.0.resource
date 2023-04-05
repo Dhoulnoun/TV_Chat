@@ -26,11 +26,11 @@ L'utilisateur lance l'éxecution du composant Felix
     Sleep    2s
 
 Felix affiche la vue connexion
-    Window Should Be Open   VueConnexion
+    Window Should Be Open   Connexion
 
 L'utilisateur change l'adresse IP
     [Arguments]    ${ip}
-    Select Window    VueConnexion
+    Select Window    Connexion
 	Click On Component    IP
 	Sleep    1s
     Focus To Component    IP
@@ -49,12 +49,12 @@ L'utilisateur change le port
 
 
 L'utilisateur demande à se connecter
-    Select Window    VueConnexion
+    Select Window    Connexion
     Push Button   Connecter
     Sleep    5s
 
 Felix affiche un message de connexion
-    Select window
+    Select window   Connexion
     ${informations} =    Get Text Field Value    Information
     should be equal as strings
 
@@ -65,9 +65,10 @@ Felix ferme la vue connexion
     log    TODO
 
 Felix affiche la vue chat
-    Select Window   VueChat
+    Select Window   Chat
     Window Should Be Open Chat
     Sleep 2s
 
 Felix affiche un message d'accueil dans le chat
+
     log    TODO
