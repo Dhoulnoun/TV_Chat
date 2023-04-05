@@ -51,3 +51,17 @@ Felix affiche la vue chat
 
 Felix affiche un message d'accueil dans le chat
     log    TODO
+
+
+
+L'utilisateur saisit la commande d'aide
+    log    TODO
+
+Felix transmet la commande d'aide à Camix
+    log    TODO
+
+Camix transmet à Felix les informations sur les commandes disponnibles
+    log    TODO
+
+Felix affiche un message d'aide sur les commandes disponnibles
+    log    TODO

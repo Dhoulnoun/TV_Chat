@@ -22,3 +22,5 @@ Entrer dans le chat [modification d'adresse IP][modification de port]
 Entrer dans le chat [connexion impossible]
     Entrer dans le chat [connexion impossible]
 
+Demander de l'aide
+    Demander de l'aide

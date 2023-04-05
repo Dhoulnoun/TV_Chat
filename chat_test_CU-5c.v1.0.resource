@@ -52,3 +52,13 @@ Entrer dans le chat [connexion impossible]
     Felix affiche un message d'erreur de connexion
     #5:
     Felix ferme la vue connexion
+
+Demander de l'aide
+    #1:
+    L'utilisateur saisit la commande d'aide
+    #2:
+    Felix transmet la commande d'aide à Camix
+    #3:
+    Camix transmet à Felix les informations sur les commandes disponnibles
+    #4:
+    Felix affiche un message d'aide sur les commandes disponnibles
