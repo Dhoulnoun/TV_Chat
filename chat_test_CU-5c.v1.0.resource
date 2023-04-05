@@ -56,13 +56,5 @@ Entrer dans le chat [connexion impossible]
 Sortir du chat
     #1:
     L'utilisateur arrête l'éxecution du composant Felix
-    #2
-    Felix se déconnecte de Camix
-    #3
-    Camix informe les composants Felix des utilisateurs inscrits dans le même canal que celui de l'utilisateur que ce dernier quitte le chat
     #4
-    Chaque composant Felix concerné affiche une message de départ de l'utilisateur du chat
-    #5
-    Camix désinscrit l'utilisateur du canal dans lequel il se trouve
-    #6
-    Camix ferme la connexion de l'utilisateur
+    Chaque composant Felix concerné affiche un message de départ de l'utilisateur du chat

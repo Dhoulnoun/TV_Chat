@@ -59,18 +59,5 @@ L'utilisateur arrête l'éxecution du composant Felix
     Arrêt Felix
     Sleep    2s
 
-Felix se déconnecte de Camix
-    Switch To Application    Felix
-    log    TODO
-
-Camix informe les composants Felix des utilisateurs inscrits dans le même canal que celui de l'utilisateur que ce dernier quitte le chat
-    log    TODO
-
-Chaque composant Felix concerné affiche une message de départ de l'utilisateur du chat
-    log    TODO
-
-Camix désinscrit l'utilisateur du canal dans lequel il se trouve
-    log    TODO
-
-Camix ferme la connexion de l'utilisateur
+Chaque composant Felix concerné affiche un message de départ de l'utilisateur du chat
     log    TODO
