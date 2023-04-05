@@ -51,3 +51,24 @@ Felix affiche la vue chat
 
 Felix affiche un message d'accueil dans le chat
     log    TODO
+
+
+##########################################
+
+L'utilisateur arrête l'éxecution du composant Felix
+    log    TODO
+
+Felix se déconnecte de Camix
+    log    TODO
+
+Camix informe les composants Felix des utilisateurs inscrits dans le même canal que celui de l'utilisateur que ce dernier quitte le chat
+    log    TODO
+
+Chaque composant Felix concerné affiche une message de départ de l'utilisateur du chat
+    log    TODO
+
+Camix désinscrit l'utilisateur du canal dans lequel il se trouve
+    log    TODO
+
+Camix ferme la connexion de l'utilisateur
+    log    TODO
