@@ -28,8 +28,10 @@ Entrer dans le chat [modification d'adresse IP][modification de port]
     Felix affiche la vue connexion
     #3:
     L'utilisateur change l'adresse IP
+    [Arguments]    ${ip}
     #4:
     L'utilisateur change le port
+    [Arguments]    ${port}
     #5:
     L'utilisateur demande à se connecter
     #6:

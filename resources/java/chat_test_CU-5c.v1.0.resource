@@ -29,10 +29,21 @@ Felix affiche la vue connexion
     log    TODO
 
 L'utilisateur change l'adresse IP
-    log    TODO
+    [Arguments]    ${ip}
+    Select Window    VueConnexion
+	Click On Component    IdentifiantIp
+	Sleep    1s
+	Insert Into Text Field    IdentifiantIp    ${ip}
+	Sleep    1s
 
 L'utilisateur change le port
-    log    TODO
+    [Arguments]    ${port}
+    Select Window    VueConnexion
+	Click On Component    IdentifiantPort
+	Sleep    1s
+	Insert Into Text Field    IdentifiantPort    ${port}
+	Sleep    1s
+
 
 L'utilisateur demande à se connecter
     log    TODO
