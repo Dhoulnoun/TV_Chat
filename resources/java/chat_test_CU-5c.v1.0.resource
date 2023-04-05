@@ -26,30 +26,37 @@ L'utilisateur lance l'éxecution du composant Felix
     Sleep    2s
 
 Felix affiche la vue connexion
-    log    TODO
+    Window Should Be Open   VueConnexion
 
 L'utilisateur change l'adresse IP
     [Arguments]    ${ip}
     Select Window    VueConnexion
-	Click On Component    IdentifiantIp
+	Click On Component    IP
 	Sleep    1s
-	Insert Into Text Field    IdentifiantIp    ${ip}
+    Focus To Component    IP
+	Insert Into Text Field    IP    ${ip}
+    Send Keyboard Event    VK_ENTER
 	Sleep    1s
 
 L'utilisateur change le port
     [Arguments]    ${port}
-    Select Window    VueConnexion
-	Click On Component    IdentifiantPort
-	Sleep    1s
-	Insert Into Text Field    IdentifiantPort    ${port}
-	Sleep    1s
+    Select Window    Connexion
+    sleep    2s
+    Focus To Component    Port
+    Insert Into Text Field    Port    ${port}
+    Send Keyboard Event    VK_ENTER
+    sleep    2s
 
 
 L'utilisateur demande à se connecter
-    log    TODO
+    Select Window    VueConnexion
+    Push Button   Connecter
+    Sleep    5s
 
 Felix affiche un message de connexion
-    log    TODO
+    Select window
+    ${informations} =    Get Text Field Value    Information
+    should be equal as strings
 
 Felix affiche un message d'erreur de connexion
     log    TODO
@@ -58,7 +65,9 @@ Felix ferme la vue connexion
     log    TODO
 
 Felix affiche la vue chat
-    log    TODO
+    Select Window   VueChat
+    Window Should Be Open Chat
+    Sleep 2s
 
 Felix affiche un message d'accueil dans le chat
     log    TODO
