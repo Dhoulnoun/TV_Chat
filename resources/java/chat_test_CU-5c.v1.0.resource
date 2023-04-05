@@ -55,13 +55,13 @@ Felix affiche un message d'accueil dans le chat
 
 
 L'utilisateur saisit la commande d'aide
-    log    TODO
-
-Felix transmet la commande d'aide à Camix
-    log    TODO
-
-Camix transmet à Felix les informations sur les commandes disponnibles
-    log    TODO
+    [Arguments]    ${command}
+    Click On Component  SaisieChat
+    Sleep    1s
+    Type Into Component    SaisieChat    ${command}
+    Sleep    1s
+    Click On Component    BoutonEnvoyer
+    Sleep    1s
 
 Felix affiche un message d'aide sur les commandes disponnibles
     log    TODO
