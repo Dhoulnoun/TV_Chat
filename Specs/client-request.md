@@ -1,3 +1,5 @@
+morix = camix
+monix = felix
 En tant que "client" je souhaiterais que vous développiez, et validiez 
 par test logiciel, les fonctionnalités suivantes sur le logiciel de chat
 (composants Camix et Felix).
