@@ -56,9 +56,11 @@ Felix affiche un message d'accueil dans le chat
 ##########################################
 
 L'utilisateur arrête l'éxecution du composant Felix
-    log    TODO
+    Arrêt Felix
+    Sleep    2s
 
 Felix se déconnecte de Camix
+    Switch To Application    Felix
     log    TODO
 
 Camix informe les composants Felix des utilisateurs inscrits dans le même canal que celui de l'utilisateur que ce dernier quitte le chat
