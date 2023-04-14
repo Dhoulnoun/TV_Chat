@@ -27,13 +27,13 @@ Entrer dans le chat [modification d'adresse IP][modification de port]
     #2:
     Felix affiche la vue connexion
     #3:
-    L'utilisateur change l'adresse IP    127.0.0.1
+    L'utilisateur change l'adresse IP    127.2.0.1
     #4:
     L'utilisateur change le port    12345
     #5:
     L'utilisateur demande à se connecter
     #6:
-    Felix affiche un message de connexion
+    Felix affiche un message de connexion    127.0.0.1    12345
     #8:
     Felix ferme la vue connexion
     #9:

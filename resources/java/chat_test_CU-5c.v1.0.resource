@@ -54,21 +54,33 @@ L'utilisateur demande à se connecter
     Sleep    5s
 
 Felix affiche un message de connexion
-    Select window   Connexion
-    ${informations} =    Get Text Field Value    Information
-    should be equal as strings
+    [Arguments]    ${informations}    ${port}     ${ip}
+    Select Window   Connexion
+    ${informations} = Get Text Field Value    Information
+    Should Be equal as strings  ${informations}     "Connexion au chat @${ip}:${port}"
 
 Felix affiche un message d'erreur de connexion
-    log    TODO
+    [Arguments]    ${informations}    ${port}     ${ip}
+    Select Window   Connexion
+    ${informations} = Get Text Field Value    Information
+    Should Be equal as strings  ${informations}     "Connexion au chat @${ip}:${port} impossible"
 
 Felix ferme la vue connexion
-    log    TODO
+    Select Window   Connexion
+    Close Window
+    Sleep 2s
 
 Felix affiche la vue chat
     Select Window   Chat
-    Window Should Be Open Chat
+    Window Should Be Open   Chat
     Sleep 2s
 
 Felix affiche un message d'accueil dans le chat
+    [Arguments]    ${message}
+    Select Window   Chat
+    ${message} = Get Text Field Value    Message
+        Should Be equal as strings  ${message}     "Bonjour"
 
-    log    TODO
+
+
+
