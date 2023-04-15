@@ -65,9 +65,17 @@ Felix affiche un message d'erreur de connexion
     ${informations} = Get Text Field Value    Information
     Should Be equal as strings  ${informations}     "Connexion au chat @${ip}:${port} impossible"
 
+Felix affiche un message de connexion impossible
+    [Arguments]    ${ip}    ${port} ${informations}
+    Select Window    Connexion
+    sleep    10s
+    ${informations} =    Get Text Field Value    Information
+    Should Be Equal As Strings    Connexion au chat @${ip}:${port} impossible   ${information}
+
+
 Felix ferme la vue connexion
     Select Window   Connexion
-    Close Window
+    Window Should Not Be Open    Connexion
     Sleep 2s
 
 Felix affiche la vue chat
@@ -76,10 +84,10 @@ Felix affiche la vue chat
     Sleep 2s
 
 Felix affiche un message d'accueil dans le chat
-    [Arguments]    ${message}
+    [Arguments]    ${message} ${MESSAGE_BIENVENUE}
     Select Window   Chat
     ${message} = Get Text Field Value    Message
-        Should Be equal as strings  ${message}     "Bonjour"
+    Should Be equal as strings  ${message}     "Taper /h pour avoir de l'aide sur les commandes du chat."
 
 
 

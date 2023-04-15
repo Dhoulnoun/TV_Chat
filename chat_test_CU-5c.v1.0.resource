@@ -42,13 +42,18 @@ Entrer dans le chat [modification d'adresse IP][modification de port]
     Felix affiche un message d'accueil dans le chat
 
 Entrer dans le chat [connexion impossible]
-    #1:
-    L'utilisateur lance l'éxecution du composant Felix
-    #2:
-    Felix affiche la vue connexion
-    #3:
+ #1.
+    L’utilisateur lance l’exécution du composant Felix
+    #2.
+    Felix affiche la connexion
+    #3.a
+    L'utilisateur modifie l'IP    123.456.789.123
+    #3.b
+    L'utilisateur modifie le port    24680
+    #3.
     L'utilisateur demande à se connecter
-    #4:
-    Felix affiche un message d'erreur de connexion
-    #5:
-    Felix ferme la vue connexion
+    #4.
+    Felix affiche un message de connexion    123.456.789.123    24680
+    #5. internes
+    #6.a
+    Felix affiche un message de connexion impossible    123.456.789.123    24680
