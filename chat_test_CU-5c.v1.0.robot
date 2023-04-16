@@ -17,7 +17,10 @@ Entrer dans le chat
     Entrer dans le chat
 
 Entrer dans le chat [modification d'adresse IP][modification de port]
-    Entrer dans le chat [modification d'adresse IP][modification de port]
+    [Template]    Entrer dans le chat [modification d'adresse IP][modification de port]
+    127.0.0.1    12345
+
 
 Entrer dans le chat [connexion impossible]
-    Entrer dans le chat [connexion impossible]
+    [Template]    Entrer dans le chat [connexion impossible]
+    127.0.0.1    1883

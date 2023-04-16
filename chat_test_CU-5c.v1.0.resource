@@ -10,7 +10,7 @@ Entrer dans le chat
     #3:
     L'utilisateur demande à se connecter
     #4:
-    Felix affiche un message de connexion
+    Felix affiche un message de connexion   127.0.0.1  12345
     #5: 6: 7: (interne)
     #8: (non appliqué dans ce test - précondition : 0 clients dans la chat)
     #9: (interne)
@@ -22,18 +22,19 @@ Entrer dans le chat
     Felix affiche un message d'accueil dans le chat
 
 Entrer dans le chat [modification d'adresse IP][modification de port]
+    [Arguments]    ${ip}    ${port}
     #1:
     L'utilisateur lance l'éxecution du composant Felix
     #2:
     Felix affiche la vue connexion
     #3:
-    L'utilisateur change l'adresse IP    127.2.0.1
+    L'utilisateur change l'adresse IP    ${ip}
     #4:
-    L'utilisateur change le port    12345
+    L'utilisateur change le port    ${port}
     #5:
     L'utilisateur demande à se connecter
     #6:
-    Felix affiche un message de connexion    127.0.0.1    12345
+    Felix affiche un message de connexion    ${ip}    ${port}
     #8:
     Felix ferme la vue connexion
     #9:
@@ -42,18 +43,18 @@ Entrer dans le chat [modification d'adresse IP][modification de port]
     Felix affiche un message d'accueil dans le chat
 
 Entrer dans le chat [connexion impossible]
- #1.
-    L’utilisateur lance l’exécution du composant Felix
-    #2.
-    Felix affiche la connexion
-    #3.a
-    L'utilisateur modifie l'IP    123.456.789.123
-    #3.b
-    L'utilisateur modifie le port    24680
-    #3.
+    [Arguments]    ${ip}    ${port}
+    #1:
+    L'utilisateur lance l'éxecution du composant Felix
+    #2:
+    Felix affiche la vue connexion
+    #3:
+    L'utilisateur change l'adresse IP    ${ip}
+    #4:
+    L'utilisateur change le port    ${port}
+    #3:
     L'utilisateur demande à se connecter
-    #4.
-    Felix affiche un message de connexion    123.456.789.123    24680
-    #5. internes
-    #6.a
-    Felix affiche un message de connexion impossible    123.456.789.123    24680
+    #4:
+    Felix affiche un message d'erreur de connexion    ${ip}    ${port}
+    #5:
+    Felix ferme la vue connexion

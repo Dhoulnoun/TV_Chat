@@ -9,7 +9,7 @@ Library    RemoteSwingLibrary
 *** Keywords ***
 
 Exécution Camix
-    Start Process    java   -Duser.language\=fr  -Duser.country\=FR   -jar SUT/Camix-0.4.3.jar  alias=Camix
+    Start Process    java   -Duser.language\=fr    -Duser.country\=FR   -jar    SUT/Camix-0.4.3.jar    alias=Camix
     Sleep    2s
 
 Arrêt Camix
@@ -26,7 +26,8 @@ L'utilisateur lance l'éxecution du composant Felix
     Sleep    2s
 
 Felix affiche la vue connexion
-    Window Should Be Open   Connexion
+    Window Should Be Open   Connexion Felix
+    Sleep    2s
 
 L'utilisateur change l'adresse IP
     [Arguments]    ${ip}
@@ -49,9 +50,8 @@ L'utilisateur change le port
 
 
 L'utilisateur demande à se connecter
-    Select Window    Connexion
-    Push Button   Connecter
-    Sleep    5s
+    Select Window    Connexion Felix
+    Push Button    Connexion
 
 Felix affiche un message de connexion
     [Arguments]    ${informations}    ${port}     ${ip}
@@ -66,11 +66,11 @@ Felix affiche un message d'erreur de connexion
     Should Be equal as strings  ${informations}     "Connexion au chat @${ip}:${port} impossible"
 
 Felix affiche un message de connexion impossible
-    [Arguments]    ${ip}    ${port} ${informations}
+    [Arguments]    ${ip}    ${port}    ${informations}
     Select Window    Connexion
     sleep    10s
     ${informations} =    Get Text Field Value    Information
-    Should Be Equal As Strings    Connexion au chat @${ip}:${port} impossible   ${information}
+    Should Be Equal As Strings    Connexion au chat @${ip}:${port} impossible   ${informations}
 
 
 Felix ferme la vue connexion
@@ -79,7 +79,7 @@ Felix ferme la vue connexion
     Sleep 2s
 
 Felix affiche la vue chat
-    Select Window   Chat
+
     Window Should Be Open   Chat
     Sleep 2s
 
@@ -88,7 +88,6 @@ Felix affiche un message d'accueil dans le chat
     Select Window   Chat
     ${message} = Get Text Field Value    Message
     Should Be equal as strings  ${message}     "Taper /h pour avoir de l'aide sur les commandes du chat."
-
 
 
 
