@@ -10,7 +10,7 @@ Entrer dans le chat
     #3:
     L'utilisateur demande à se connecter
     #4:
-    Felix affiche un message de connexion   127.0.0.1  12345
+    Felix affiche un message de connexion    127.0.0.1    12345
     #5: 6: 7: (interne)
     #8: (non appliqué dans ce test - précondition : 0 clients dans la chat)
     #9: (interne)
@@ -56,5 +56,3 @@ Entrer dans le chat [connexion impossible]
     L'utilisateur demande à se connecter
     #4:
     Felix affiche un message d'erreur de connexion    ${ip}    ${port}
-    #5:
-    Felix ferme la vue connexion

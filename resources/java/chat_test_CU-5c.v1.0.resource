@@ -18,6 +18,7 @@ Arrêt Camix
 
 Arrêt Felix
     Switch To Application    Felix
+    sleep    2s
     System Exit
 
 L'utilisateur lance l'éxecution du composant Felix
@@ -26,8 +27,7 @@ L'utilisateur lance l'éxecution du composant Felix
     Sleep    2s
 
 Felix affiche la vue connexion
-    Window Should Be Open   Connexion Felix
-    Sleep    2s
+    Window Should Be Open   Connexion
 
 L'utilisateur change l'adresse IP
     [Arguments]    ${ip}
@@ -50,44 +50,36 @@ L'utilisateur change le port
 
 
 L'utilisateur demande à se connecter
-    Select Window    Connexion Felix
+    Select Window    Connexion
     Push Button    Connexion
+    sleep    2s
 
 Felix affiche un message de connexion
-    [Arguments]    ${informations}    ${port}     ${ip}
-    Select Window   Connexion
-    ${informations} = Get Text Field Value    Information
-    Should Be equal as strings  ${informations}     "Connexion au chat @${ip}:${port}"
+    [Arguments]    ${ip}    ${port}
+    ${informations} =    Get Text Field Value    Information
+    Should Be equal as strings  ${informations}     Connexion au chat @${ip}:${port}
+    sleep    2s
 
 Felix affiche un message d'erreur de connexion
-    [Arguments]    ${informations}    ${port}     ${ip}
-    Select Window   Connexion
-    ${informations} = Get Text Field Value    Information
-    Should Be equal as strings  ${informations}     "Connexion au chat @${ip}:${port} impossible"
-
-Felix affiche un message de connexion impossible
-    [Arguments]    ${ip}    ${port}    ${informations}
-    Select Window    Connexion
-    sleep    10s
+    [Arguments]    ${ip}    ${port}
+    sleep    6s
     ${informations} =    Get Text Field Value    Information
-    Should Be Equal As Strings    Connexion au chat @${ip}:${port} impossible   ${informations}
-
+    Should Be equal as strings  ${informations}     Connexion au chat @${ip}:${port} impossible
 
 Felix ferme la vue connexion
-    Select Window   Connexion
     Window Should Not Be Open    Connexion
-    Sleep 2s
+    Sleep    1s
 
 Felix affiche la vue chat
-
     Window Should Be Open   Chat
-    Sleep 2s
+    Sleep    2s
 
 Felix affiche un message d'accueil dans le chat
-    [Arguments]    ${message} ${MESSAGE_BIENVENUE}
     Select Window   Chat
-    ${message} = Get Text Field Value    Message
-    Should Be equal as strings  ${message}     "Taper /h pour avoir de l'aide sur les commandes du chat."
+    ${message} =    Get Text Field Value    Messages
+    Should start with    ${message}    * Taper /h pour avoir de l'aide sur les commandes du chat.
+    sleep    2s
+
 
 
 
