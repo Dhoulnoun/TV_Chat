@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230405 09:05:49.908" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.10.7 on win32)" generated="20230416 22:47:30.220" rpa="false" schemaversion="3">
 <suite id="s1" name="chat test CU-5c.v1.0" source="C:\Users\Younes\Documents\IMT\S1\QLogiciel\TV_Chat\chat_test_CU-5c.v1.0.robot">
 <kw name="Exécution Camix" library="chat_test_CU-5c.v1.0" type="SETUP">
 <kw name="Start Process" library="Process">
 <arg>java</arg>
 <arg>-Duser.language\=fr</arg>
 <arg>-Duser.country\=FR</arg>
-<arg>-jar SUT/Camix-0.4.3.jar</arg>
+<arg>-jar</arg>
+<arg>SUT/Camix-0.4.3.jar</arg>
 <arg>alias=Camix</arg>
 <doc>Starts a new process on background.</doc>
-<msg timestamp="20230405 09:05:50.279" level="INFO">Starting process:
-java -Duser.language=fr -Duser.country=FR "-jar SUT/Camix-0.4.3.jar"</msg>
-<status status="PASS" starttime="20230405 09:05:50.279" endtime="20230405 09:05:50.292"/>
+<msg timestamp="20230416 22:47:30.670" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Camix-0.4.3.jar</msg>
+<status status="PASS" starttime="20230416 22:47:30.670" endtime="20230416 22:47:30.683"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230405 09:05:52.299" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230405 09:05:50.292" endtime="20230405 09:05:52.299"/>
+<msg timestamp="20230416 22:47:32.693" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:47:30.683" endtime="20230416 22:47:32.693"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:50.279" endtime="20230405 09:05:52.299"/>
+<status status="PASS" starttime="20230416 22:47:30.669" endtime="20230416 22:47:32.694"/>
 </kw>
-<test id="s1-t1" name="Entrer dans le chat" line="16">
+<test id="s1-t1" name="Entrer dans le chat" line="23">
 <kw name="Entrer dans le chat" library="chat_test_CU-5c.v1.0">
 <kw name="L'utilisateur lance l'éxecution du composant Felix" library="chat_test_CU-5c.v1.0">
 <kw name="Start Application" library="RemoteSwingLibrary">
@@ -31,82 +32,139 @@ java -Duser.language=fr -Duser.country=FR "-jar SUT/Camix-0.4.3.jar"</msg>
 <arg>stderr=/dev/null</arg>
 <doc>Starts the process in the ``command`` parameter  on the host operating system.
         The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
-<msg timestamp="20230405 09:05:52.301" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
-<msg timestamp="20230405 09:05:52.301" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
-<msg timestamp="20230405 09:05:52.301" level="INFO">-javaagent:"C:\Users\Younes\Documents\jar\remoteswinglibrary-2.3.2.jar"=127.0.0.1:60885</msg>
-<msg timestamp="20230405 09:05:52.301" level="INFO">Java version &gt; 9: True</msg>
-<msg timestamp="20230405 09:05:52.306" level="INFO">Starting process:
+<msg timestamp="20230416 22:47:32.695" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:47:32.696" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:47:32.696" level="INFO">-javaagent:"C:\Users\Younes\Documents\jar\remoteswinglibrary-2.3.2.jar"=127.0.0.1:61846</msg>
+<msg timestamp="20230416 22:47:32.696" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20230416 22:47:32.699" level="INFO">Starting process:
 java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
-<msg timestamp="20230405 09:05:54.828" level="INFO">connecting to started application at 127.0.0.1:60886</msg>
-<msg timestamp="20230405 09:05:54.828" level="INFO">waiting for api at 127.0.0.1:60886</msg>
-<msg timestamp="20230405 09:05:54.923" level="INFO">api is ready</msg>
-<msg timestamp="20230405 09:05:54.923" level="INFO">connected to started application at 127.0.0.1:60886</msg>
-<msg timestamp="20230405 09:05:54.923" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
-<status status="PASS" starttime="20230405 09:05:52.300" endtime="20230405 09:05:54.923"/>
+<msg timestamp="20230416 22:47:35.398" level="INFO">connecting to started application at 127.0.0.1:61847</msg>
+<msg timestamp="20230416 22:47:35.398" level="INFO">waiting for api at 127.0.0.1:61847</msg>
+<msg timestamp="20230416 22:47:35.538" level="INFO">api is ready</msg>
+<msg timestamp="20230416 22:47:35.538" level="INFO">connected to started application at 127.0.0.1:61847</msg>
+<msg timestamp="20230416 22:47:35.539" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20230416 22:47:32.695" endtime="20230416 22:47:35.539"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230405 09:05:56.929" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230405 09:05:54.923" endtime="20230405 09:05:56.929"/>
+<msg timestamp="20230416 22:47:37.544" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:47:35.539" endtime="20230416 22:47:37.544"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:52.300" endtime="20230405 09:05:56.929"/>
+<status status="PASS" starttime="20230416 22:47:32.695" endtime="20230416 22:47:37.545"/>
 </kw>
 <kw name="Felix affiche la vue connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:05:56.930" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:05:56.930" endtime="20230405 09:05:56.930"/>
+<kw name="Window Should Be Open" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" starttime="20230416 22:47:37.545" endtime="20230416 22:47:37.971"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:56.930" endtime="20230405 09:05:56.930"/>
+<status status="PASS" starttime="20230416 22:47:37.545" endtime="20230416 22:47:37.972"/>
 </kw>
 <kw name="L'utilisateur demande à se connecter" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:05:56.931" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:05:56.931" endtime="20230405 09:05:56.931"/>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:47:37.972" endtime="20230416 22:47:37.977"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:56.930" endtime="20230405 09:05:56.931"/>
+<kw name="Push Button" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<status status="PASS" starttime="20230416 22:47:37.977" endtime="20230416 22:47:38.017"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:47:40.027" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:47:38.017" endtime="20230416 22:47:40.027"/>
+</kw>
+<status status="PASS" starttime="20230416 22:47:37.972" endtime="20230416 22:47:40.027"/>
 </kw>
 <kw name="Felix affiche un message de connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:05:56.932" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:05:56.932" endtime="20230405 09:05:56.932"/>
+<arg>127.0.0.1</arg>
+<arg>12345</arg>
+<kw name="Get Text Field Value" library="RemoteSwingLibrary">
+<var>${informations}</var>
+<arg>Information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<msg timestamp="20230416 22:47:40.054" level="INFO">${informations} = Connexion au chat @127.0.0.1:12345</msg>
+<status status="PASS" starttime="20230416 22:47:40.028" endtime="20230416 22:47:40.054"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:56.931" endtime="20230405 09:05:56.932"/>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${informations}</arg>
+<arg>Connexion au chat @${ip}:${port}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230416 22:47:40.055" endtime="20230416 22:47:40.055"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:47:42.056" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:47:40.055" endtime="20230416 22:47:42.056"/>
+</kw>
+<status status="PASS" starttime="20230416 22:47:40.027" endtime="20230416 22:47:42.056"/>
 </kw>
 <kw name="Felix ferme la vue connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:05:56.932" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:05:56.932" endtime="20230405 09:05:56.932"/>
+<kw name="Window Should Not Be Open" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="PASS" starttime="20230416 22:47:42.056" endtime="20230416 22:47:52.074"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:56.932" endtime="20230405 09:05:56.933"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:47:53.084" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:47:52.074" endtime="20230416 22:47:53.084"/>
+</kw>
+<status status="PASS" starttime="20230416 22:47:42.056" endtime="20230416 22:47:53.085"/>
 </kw>
 <kw name="Felix affiche la vue chat" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:05:56.933" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:05:56.933" endtime="20230405 09:05:56.933"/>
+<kw name="Window Should Be Open" library="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" starttime="20230416 22:47:53.085" endtime="20230416 22:47:53.089"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:56.933" endtime="20230405 09:05:56.933"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:47:55.096" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:47:53.090" endtime="20230416 22:47:55.096"/>
+</kw>
+<status status="PASS" starttime="20230416 22:47:53.085" endtime="20230416 22:47:55.097"/>
 </kw>
 <kw name="Felix affiche un message d'accueil dans le chat" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:05:56.933" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:05:56.933" endtime="20230405 09:05:56.933"/>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:47:55.098" endtime="20230416 22:47:55.104"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:56.933" endtime="20230405 09:05:56.935"/>
+<kw name="Get Text Field Value" library="RemoteSwingLibrary">
+<var>${message}</var>
+<arg>Messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<msg timestamp="20230416 22:47:55.112" level="INFO">${message} = * Taper /h pour avoir de l'aide sur les commandes du chat.
+
+
+
+</msg>
+<status status="PASS" starttime="20230416 22:47:55.105" endtime="20230416 22:47:55.112"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:52.300" endtime="20230405 09:05:56.935"/>
+<kw name="Should Start With" library="BuiltIn">
+<arg>${message}</arg>
+<arg>* Taper /h pour avoir de l'aide sur les commandes du chat.</arg>
+<doc>Fails if the string ``str1`` does not start with the string ``str2``.</doc>
+<status status="PASS" starttime="20230416 22:47:55.112" endtime="20230416 22:47:55.112"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:47:57.114" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:47:55.113" endtime="20230416 22:47:57.114"/>
+</kw>
+<status status="PASS" starttime="20230416 22:47:55.097" endtime="20230416 22:47:57.114"/>
+</kw>
+<status status="PASS" starttime="20230416 22:47:32.694" endtime="20230416 22:47:57.115"/>
 </kw>
 <kw name="Arrêt Felix" library="chat_test_CU-5c.v1.0" type="TEARDOWN">
 <kw name="Switch To Application" library="RemoteSwingLibrary">
@@ -114,21 +172,29 @@ java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
 <doc>Switches between applications that are known to RemoteSwingLibrary.
         The application is identified using the ``alias``.
         Subsequent keywords will be passed on to this application.</doc>
-<status status="PASS" starttime="20230405 09:05:56.935" endtime="20230405 09:05:56.935"/>
+<status status="PASS" starttime="20230416 22:47:57.115" endtime="20230416 22:47:57.116"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:47:59.130" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:47:57.116" endtime="20230416 22:47:59.130"/>
 </kw>
 <kw name="System Exit" library="RemoteSwingLibrary">
 <doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
-<msg timestamp="20230405 09:05:59.659" level="INFO">Connection died as expected</msg>
-<msg timestamp="20230405 09:05:59.660" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20230405 09:05:59.663" level="INFO">Process completed.</msg>
-<status status="PASS" starttime="20230405 09:05:56.935" endtime="20230405 09:05:59.663"/>
+<msg timestamp="20230416 22:48:01.847" level="INFO">Connection died as expected</msg>
+<msg timestamp="20230416 22:48:01.847" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20230416 22:48:01.849" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20230416 22:47:59.130" endtime="20230416 22:48:01.850"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:56.935" endtime="20230405 09:05:59.663"/>
+<status status="PASS" starttime="20230416 22:47:57.115" endtime="20230416 22:48:01.850"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:52.299" endtime="20230405 09:05:59.664"/>
+<status status="PASS" starttime="20230416 22:47:32.694" endtime="20230416 22:48:01.850"/>
 </test>
-<test id="s1-t2" name="Entrer dans le chat [modification d'adresse IP][modification de port]" line="19">
+<test id="s1-t2" name="Entrer dans le chat [modification d'adresse IP][modification de port]" line="26">
 <kw name="Entrer dans le chat [modification d'adresse IP][modification de port]" library="chat_test_CU-5c.v1.0">
+<arg>${ip1}</arg>
+<arg>${port1}</arg>
 <kw name="L'utilisateur lance l'éxecution du composant Felix" library="chat_test_CU-5c.v1.0">
 <kw name="Start Application" library="RemoteSwingLibrary">
 <arg>Felix</arg>
@@ -137,122 +203,228 @@ java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
 <arg>stderr=/dev/null</arg>
 <doc>Starts the process in the ``command`` parameter  on the host operating system.
         The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
-<msg timestamp="20230405 09:05:59.666" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
-<msg timestamp="20230405 09:05:59.666" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
-<msg timestamp="20230405 09:05:59.666" level="INFO">-javaagent:"C:\Users\Younes\Documents\jar\remoteswinglibrary-2.3.2.jar"=127.0.0.1:60885</msg>
-<msg timestamp="20230405 09:05:59.666" level="INFO">Java version &gt; 9: True</msg>
-<msg timestamp="20230405 09:05:59.669" level="INFO">Starting process:
+<msg timestamp="20230416 22:48:01.852" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:48:01.852" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:48:01.852" level="INFO">-javaagent:"C:\Users\Younes\Documents\jar\remoteswinglibrary-2.3.2.jar"=127.0.0.1:61846</msg>
+<msg timestamp="20230416 22:48:01.852" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20230416 22:48:01.855" level="INFO">Starting process:
 java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
-<msg timestamp="20230405 09:06:02.169" level="INFO">connecting to started application at 127.0.0.1:60891</msg>
-<msg timestamp="20230405 09:06:02.170" level="INFO">waiting for api at 127.0.0.1:60891</msg>
-<msg timestamp="20230405 09:06:02.258" level="INFO">api is ready</msg>
-<msg timestamp="20230405 09:06:02.258" level="INFO">connected to started application at 127.0.0.1:60891</msg>
-<msg timestamp="20230405 09:06:02.259" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
-<status status="PASS" starttime="20230405 09:05:59.666" endtime="20230405 09:06:02.259"/>
+<msg timestamp="20230416 22:48:04.372" level="INFO">connecting to started application at 127.0.0.1:61861</msg>
+<msg timestamp="20230416 22:48:04.372" level="INFO">waiting for api at 127.0.0.1:61861</msg>
+<msg timestamp="20230416 22:48:04.463" level="INFO">api is ready</msg>
+<msg timestamp="20230416 22:48:04.463" level="INFO">connected to started application at 127.0.0.1:61861</msg>
+<msg timestamp="20230416 22:48:04.464" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20230416 22:48:01.851" endtime="20230416 22:48:04.465"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230405 09:06:04.262" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230405 09:06:02.259" endtime="20230405 09:06:04.262"/>
+<msg timestamp="20230416 22:48:06.472" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:04.465" endtime="20230416 22:48:06.472"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:59.666" endtime="20230405 09:06:04.263"/>
+<status status="PASS" starttime="20230416 22:48:01.851" endtime="20230416 22:48:06.472"/>
 </kw>
 <kw name="Felix affiche la vue connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:04.263" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:04.263" endtime="20230405 09:06:04.263"/>
+<kw name="Window Should Be Open" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" starttime="20230416 22:48:06.473" endtime="20230416 22:48:06.876"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.263" endtime="20230405 09:06:04.263"/>
+<status status="PASS" starttime="20230416 22:48:06.472" endtime="20230416 22:48:06.876"/>
 </kw>
 <kw name="L'utilisateur change l'adresse IP" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:04.264" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:04.264" endtime="20230405 09:06:04.264"/>
+<arg>${ip}</arg>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:48:06.877" endtime="20230416 22:48:06.882"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.263" endtime="20230405 09:06:04.264"/>
+<kw name="Click On Component" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" starttime="20230416 22:48:06.882" endtime="20230416 22:48:06.913"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:07.919" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:48:06.913" endtime="20230416 22:48:07.919"/>
+</kw>
+<kw name="Focus To Component" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" starttime="20230416 22:48:07.919" endtime="20230416 22:48:07.926"/>
+</kw>
+<kw name="Insert Into Text Field" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" starttime="20230416 22:48:07.927" endtime="20230416 22:48:07.947"/>
+</kw>
+<kw name="Send Keyboard Event" library="RemoteSwingLibrary">
+<arg>VK_ENTER</arg>
+<doc>Sends keystrokes to the currently selected component.
+Keystroke codes must be one of the mappings in ``abbot.tester.KeyStrokeMap`` (https://sourceforge.net/p/abbot/svn/1214/tree/trunk/abbot/src/abbot/tester/KeyStrokeMap.java#l110).
+Constants from ``java.awt.event.InputEvent`` can be used as optional modifiers.</doc>
+<status status="PASS" starttime="20230416 22:48:07.948" endtime="20230416 22:48:07.957"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:08.960" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:48:07.957" endtime="20230416 22:48:08.960"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:06.876" endtime="20230416 22:48:08.961"/>
 </kw>
 <kw name="L'utilisateur change le port" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:04.265" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:04.265" endtime="20230405 09:06:04.265"/>
+<arg>${port}</arg>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:48:08.962" endtime="20230416 22:48:08.968"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.264" endtime="20230405 09:06:04.265"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:10.979" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:08.969" endtime="20230416 22:48:10.979"/>
+</kw>
+<kw name="Focus To Component" library="RemoteSwingLibrary">
+<arg>Port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" starttime="20230416 22:48:10.979" endtime="20230416 22:48:10.986"/>
+</kw>
+<kw name="Insert Into Text Field" library="RemoteSwingLibrary">
+<arg>Port</arg>
+<arg>${port}</arg>
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" starttime="20230416 22:48:10.986" endtime="20230416 22:48:10.996"/>
+</kw>
+<kw name="Send Keyboard Event" library="RemoteSwingLibrary">
+<arg>VK_ENTER</arg>
+<doc>Sends keystrokes to the currently selected component.
+Keystroke codes must be one of the mappings in ``abbot.tester.KeyStrokeMap`` (https://sourceforge.net/p/abbot/svn/1214/tree/trunk/abbot/src/abbot/tester/KeyStrokeMap.java#l110).
+Constants from ``java.awt.event.InputEvent`` can be used as optional modifiers.</doc>
+<status status="PASS" starttime="20230416 22:48:10.996" endtime="20230416 22:48:11.005"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:13.018" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:11.005" endtime="20230416 22:48:13.018"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:08.961" endtime="20230416 22:48:13.018"/>
 </kw>
 <kw name="L'utilisateur demande à se connecter" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:04.266" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:04.266" endtime="20230405 09:06:04.266"/>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:48:13.019" endtime="20230416 22:48:13.025"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.265" endtime="20230405 09:06:04.266"/>
+<kw name="Push Button" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<status status="PASS" starttime="20230416 22:48:13.025" endtime="20230416 22:48:13.051"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:15.065" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:13.051" endtime="20230416 22:48:15.065"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:13.018" endtime="20230416 22:48:15.065"/>
 </kw>
 <kw name="Felix affiche un message de connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:04.266" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:04.266" endtime="20230405 09:06:04.266"/>
+<arg>${ip}</arg>
+<arg>${port}</arg>
+<kw name="Get Text Field Value" library="RemoteSwingLibrary">
+<var>${informations}</var>
+<arg>Information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<msg timestamp="20230416 22:48:15.076" level="INFO">${informations} = Connexion au chat @127.0.0.1:12345</msg>
+<status status="PASS" starttime="20230416 22:48:15.066" endtime="20230416 22:48:15.076"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.266" endtime="20230405 09:06:04.266"/>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${informations}</arg>
+<arg>Connexion au chat @${ip}:${port}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230416 22:48:15.076" endtime="20230416 22:48:15.076"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:17.077" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:15.076" endtime="20230416 22:48:17.077"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:15.066" endtime="20230416 22:48:17.077"/>
 </kw>
 <kw name="Felix ferme la vue connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:04.266" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:04.266" endtime="20230405 09:06:04.266"/>
+<kw name="Window Should Not Be Open" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="PASS" starttime="20230416 22:48:17.078" endtime="20230416 22:48:27.093"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.266" endtime="20230405 09:06:04.266"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:28.103" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:48:27.094" endtime="20230416 22:48:28.103"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:17.077" endtime="20230416 22:48:28.103"/>
 </kw>
 <kw name="Felix affiche la vue chat" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:04.267" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:04.267" endtime="20230405 09:06:04.267"/>
+<kw name="Window Should Be Open" library="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" starttime="20230416 22:48:28.104" endtime="20230416 22:48:28.109"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.266" endtime="20230405 09:06:04.267"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:30.116" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:28.109" endtime="20230416 22:48:30.116"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:28.103" endtime="20230416 22:48:30.116"/>
 </kw>
 <kw name="Felix affiche un message d'accueil dans le chat" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:04.267" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:04.267" endtime="20230405 09:06:04.267"/>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:48:30.117" endtime="20230416 22:48:30.121"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.267" endtime="20230405 09:06:04.267"/>
+<kw name="Get Text Field Value" library="RemoteSwingLibrary">
+<var>${message}</var>
+<arg>Messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<msg timestamp="20230416 22:48:30.126" level="INFO">${message} = * Taper /h pour avoir de l'aide sur les commandes du chat.
+
+
+
+</msg>
+<status status="PASS" starttime="20230416 22:48:30.121" endtime="20230416 22:48:30.126"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:59.665" endtime="20230405 09:06:04.267"/>
+<kw name="Should Start With" library="BuiltIn">
+<arg>${message}</arg>
+<arg>* Taper /h pour avoir de l'aide sur les commandes du chat.</arg>
+<doc>Fails if the string ``str1`` does not start with the string ``str2``.</doc>
+<status status="PASS" starttime="20230416 22:48:30.126" endtime="20230416 22:48:30.127"/>
 </kw>
-<kw name="Arrêt Felix" library="chat_test_CU-5c.v1.0" type="TEARDOWN">
-<kw name="Switch To Application" library="RemoteSwingLibrary">
-<arg>Felix</arg>
-<doc>Switches between applications that are known to RemoteSwingLibrary.
-        The application is identified using the ``alias``.
-        Subsequent keywords will be passed on to this application.</doc>
-<status status="PASS" starttime="20230405 09:06:04.267" endtime="20230405 09:06:04.267"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:32.142" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:30.127" endtime="20230416 22:48:32.142"/>
 </kw>
-<kw name="System Exit" library="RemoteSwingLibrary">
-<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
-<msg timestamp="20230405 09:06:07.009" level="INFO">Connection died as expected</msg>
-<msg timestamp="20230405 09:06:07.009" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20230405 09:06:07.012" level="INFO">Process completed.</msg>
-<status status="PASS" starttime="20230405 09:06:04.267" endtime="20230405 09:06:07.012"/>
+<status status="PASS" starttime="20230416 22:48:30.117" endtime="20230416 22:48:32.142"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:04.267" endtime="20230405 09:06:07.012"/>
+<status status="PASS" starttime="20230416 22:48:01.851" endtime="20230416 22:48:32.142"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:59.665" endtime="20230405 09:06:07.012"/>
-</test>
-<test id="s1-t3" name="Entrer dans le chat [connexion impossible]" line="22">
-<kw name="Entrer dans le chat [connexion impossible]" library="chat_test_CU-5c.v1.0">
+<kw name="Entrer dans le chat [modification d'adresse IP][modification de port]" library="chat_test_CU-5c.v1.0">
+<arg>${ip2}</arg>
+<arg>${port1}</arg>
 <kw name="L'utilisateur lance l'éxecution du composant Felix" library="chat_test_CU-5c.v1.0">
 <kw name="Start Application" library="RemoteSwingLibrary">
 <arg>Felix</arg>
@@ -261,64 +433,224 @@ java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
 <arg>stderr=/dev/null</arg>
 <doc>Starts the process in the ``command`` parameter  on the host operating system.
         The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
-<msg timestamp="20230405 09:06:07.013" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
-<msg timestamp="20230405 09:06:07.013" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
-<msg timestamp="20230405 09:06:07.013" level="INFO">-javaagent:"C:\Users\Younes\Documents\jar\remoteswinglibrary-2.3.2.jar"=127.0.0.1:60885</msg>
-<msg timestamp="20230405 09:06:07.013" level="INFO">Java version &gt; 9: True</msg>
-<msg timestamp="20230405 09:06:07.018" level="INFO">Starting process:
+<msg timestamp="20230416 22:48:32.144" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:48:32.144" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:48:32.144" level="INFO">-javaagent:"C:\Users\Younes\Documents\jar\remoteswinglibrary-2.3.2.jar"=127.0.0.1:61846</msg>
+<msg timestamp="20230416 22:48:32.144" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20230416 22:48:32.148" level="INFO">Starting process:
 java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
-<msg timestamp="20230405 09:06:09.582" level="INFO">connecting to started application at 127.0.0.1:60896</msg>
-<msg timestamp="20230405 09:06:09.582" level="INFO">waiting for api at 127.0.0.1:60896</msg>
-<msg timestamp="20230405 09:06:09.669" level="INFO">api is ready</msg>
-<msg timestamp="20230405 09:06:09.669" level="INFO">connected to started application at 127.0.0.1:60896</msg>
-<msg timestamp="20230405 09:06:09.669" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
-<status status="PASS" starttime="20230405 09:06:07.013" endtime="20230405 09:06:09.671"/>
+<msg timestamp="20230416 22:48:34.679" level="INFO">connecting to started application at 127.0.0.1:61883</msg>
+<msg timestamp="20230416 22:48:34.679" level="INFO">waiting for api at 127.0.0.1:61883</msg>
+<msg timestamp="20230416 22:48:34.771" level="INFO">api is ready</msg>
+<msg timestamp="20230416 22:48:34.771" level="INFO">connected to started application at 127.0.0.1:61883</msg>
+<msg timestamp="20230416 22:48:34.771" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20230416 22:48:32.143" endtime="20230416 22:48:34.772"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230405 09:06:11.679" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230405 09:06:09.671" endtime="20230405 09:06:11.679"/>
+<msg timestamp="20230416 22:48:36.778" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:34.772" endtime="20230416 22:48:36.778"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:07.013" endtime="20230405 09:06:11.679"/>
+<status status="PASS" starttime="20230416 22:48:32.143" endtime="20230416 22:48:36.778"/>
 </kw>
 <kw name="Felix affiche la vue connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:11.680" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:11.680" endtime="20230405 09:06:11.680"/>
+<kw name="Window Should Be Open" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" starttime="20230416 22:48:36.778" endtime="20230416 22:48:37.167"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:11.679" endtime="20230405 09:06:11.680"/>
+<status status="PASS" starttime="20230416 22:48:36.778" endtime="20230416 22:48:37.167"/>
+</kw>
+<kw name="L'utilisateur change l'adresse IP" library="chat_test_CU-5c.v1.0">
+<arg>${ip}</arg>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:48:37.168" endtime="20230416 22:48:37.173"/>
+</kw>
+<kw name="Click On Component" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" starttime="20230416 22:48:37.174" endtime="20230416 22:48:37.205"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:38.215" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:48:37.206" endtime="20230416 22:48:38.215"/>
+</kw>
+<kw name="Focus To Component" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" starttime="20230416 22:48:38.215" endtime="20230416 22:48:38.221"/>
+</kw>
+<kw name="Insert Into Text Field" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" starttime="20230416 22:48:38.221" endtime="20230416 22:48:38.241"/>
+</kw>
+<kw name="Send Keyboard Event" library="RemoteSwingLibrary">
+<arg>VK_ENTER</arg>
+<doc>Sends keystrokes to the currently selected component.
+Keystroke codes must be one of the mappings in ``abbot.tester.KeyStrokeMap`` (https://sourceforge.net/p/abbot/svn/1214/tree/trunk/abbot/src/abbot/tester/KeyStrokeMap.java#l110).
+Constants from ``java.awt.event.InputEvent`` can be used as optional modifiers.</doc>
+<status status="PASS" starttime="20230416 22:48:38.241" endtime="20230416 22:48:38.247"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:39.258" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:48:38.248" endtime="20230416 22:48:39.258"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:37.167" endtime="20230416 22:48:39.258"/>
+</kw>
+<kw name="L'utilisateur change le port" library="chat_test_CU-5c.v1.0">
+<arg>${port}</arg>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:48:39.259" endtime="20230416 22:48:39.266"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:41.274" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:39.266" endtime="20230416 22:48:41.274"/>
+</kw>
+<kw name="Focus To Component" library="RemoteSwingLibrary">
+<arg>Port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" starttime="20230416 22:48:41.274" endtime="20230416 22:48:41.280"/>
+</kw>
+<kw name="Insert Into Text Field" library="RemoteSwingLibrary">
+<arg>Port</arg>
+<arg>${port}</arg>
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" starttime="20230416 22:48:41.280" endtime="20230416 22:48:41.288"/>
+</kw>
+<kw name="Send Keyboard Event" library="RemoteSwingLibrary">
+<arg>VK_ENTER</arg>
+<doc>Sends keystrokes to the currently selected component.
+Keystroke codes must be one of the mappings in ``abbot.tester.KeyStrokeMap`` (https://sourceforge.net/p/abbot/svn/1214/tree/trunk/abbot/src/abbot/tester/KeyStrokeMap.java#l110).
+Constants from ``java.awt.event.InputEvent`` can be used as optional modifiers.</doc>
+<status status="PASS" starttime="20230416 22:48:41.288" endtime="20230416 22:48:41.299"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:43.302" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:41.299" endtime="20230416 22:48:43.302"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:39.259" endtime="20230416 22:48:43.302"/>
 </kw>
 <kw name="L'utilisateur demande à se connecter" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:11.681" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:11.681" endtime="20230405 09:06:11.681"/>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:48:43.302" endtime="20230416 22:48:43.307"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:11.681" endtime="20230405 09:06:11.682"/>
+<kw name="Push Button" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<status status="PASS" starttime="20230416 22:48:43.308" endtime="20230416 22:48:43.341"/>
 </kw>
-<kw name="Felix affiche un message d'erreur de connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:11.682" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:11.682" endtime="20230405 09:06:11.682"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:45.351" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:43.341" endtime="20230416 22:48:45.351"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:11.682" endtime="20230405 09:06:11.682"/>
+<status status="PASS" starttime="20230416 22:48:43.302" endtime="20230416 22:48:45.351"/>
+</kw>
+<kw name="Felix affiche un message de connexion" library="chat_test_CU-5c.v1.0">
+<arg>${ip}</arg>
+<arg>${port}</arg>
+<kw name="Get Text Field Value" library="RemoteSwingLibrary">
+<var>${informations}</var>
+<arg>Information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<msg timestamp="20230416 22:48:45.363" level="INFO">${informations} = Connexion au chat @127.0.0.2:12345</msg>
+<status status="PASS" starttime="20230416 22:48:45.351" endtime="20230416 22:48:45.363"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${informations}</arg>
+<arg>Connexion au chat @${ip}:${port}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230416 22:48:45.363" endtime="20230416 22:48:45.364"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:47.369" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:45.364" endtime="20230416 22:48:47.369"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:45.351" endtime="20230416 22:48:47.369"/>
 </kw>
 <kw name="Felix ferme la vue connexion" library="chat_test_CU-5c.v1.0">
-<kw name="Log" library="BuiltIn">
-<arg>TODO</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230405 09:06:11.683" level="INFO">TODO</msg>
-<status status="PASS" starttime="20230405 09:06:11.683" endtime="20230405 09:06:11.683"/>
+<kw name="Window Should Not Be Open" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is open.
+| `Window Should Not Be Open` | window |</doc>
+<status status="PASS" starttime="20230416 22:48:47.370" endtime="20230416 22:48:57.388"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:11.683" endtime="20230405 09:06:11.683"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:48:58.394" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:48:57.388" endtime="20230416 22:48:58.394"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:07.013" endtime="20230405 09:06:11.683"/>
+<status status="PASS" starttime="20230416 22:48:47.370" endtime="20230416 22:48:58.394"/>
+</kw>
+<kw name="Felix affiche la vue chat" library="chat_test_CU-5c.v1.0">
+<kw name="Window Should Be Open" library="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" starttime="20230416 22:48:58.395" endtime="20230416 22:48:58.401"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:00.406" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:48:58.401" endtime="20230416 22:49:00.406"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:58.394" endtime="20230416 22:49:00.406"/>
+</kw>
+<kw name="Felix affiche un message d'accueil dans le chat" library="chat_test_CU-5c.v1.0">
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Chat</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:49:00.407" endtime="20230416 22:49:00.412"/>
+</kw>
+<kw name="Get Text Field Value" library="RemoteSwingLibrary">
+<var>${message}</var>
+<arg>Messages</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<msg timestamp="20230416 22:49:00.417" level="INFO">${message} = * Taper /h pour avoir de l'aide sur les commandes du chat.
+
+
+
+</msg>
+<status status="PASS" starttime="20230416 22:49:00.412" endtime="20230416 22:49:00.417"/>
+</kw>
+<kw name="Should Start With" library="BuiltIn">
+<arg>${message}</arg>
+<arg>* Taper /h pour avoir de l'aide sur les commandes du chat.</arg>
+<doc>Fails if the string ``str1`` does not start with the string ``str2``.</doc>
+<status status="PASS" starttime="20230416 22:49:00.417" endtime="20230416 22:49:00.417"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:02.432" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:00.418" endtime="20230416 22:49:02.432"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:00.406" endtime="20230416 22:49:02.432"/>
+</kw>
+<status status="PASS" starttime="20230416 22:48:32.142" endtime="20230416 22:49:02.432"/>
 </kw>
 <kw name="Arrêt Felix" library="chat_test_CU-5c.v1.0" type="TEARDOWN">
 <kw name="Switch To Application" library="RemoteSwingLibrary">
@@ -326,36 +658,410 @@ java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
 <doc>Switches between applications that are known to RemoteSwingLibrary.
         The application is identified using the ``alias``.
         Subsequent keywords will be passed on to this application.</doc>
-<status status="PASS" starttime="20230405 09:06:11.684" endtime="20230405 09:06:11.685"/>
+<status status="PASS" starttime="20230416 22:49:02.433" endtime="20230416 22:49:02.434"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:04.449" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:02.434" endtime="20230416 22:49:04.449"/>
 </kw>
 <kw name="System Exit" library="RemoteSwingLibrary">
 <doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
-<msg timestamp="20230405 09:06:14.409" level="INFO">Connection died as expected</msg>
-<msg timestamp="20230405 09:06:14.410" level="INFO">Waiting for process to complete.</msg>
-<msg timestamp="20230405 09:06:14.413" level="INFO">Process completed.</msg>
-<status status="PASS" starttime="20230405 09:06:11.685" endtime="20230405 09:06:14.413"/>
+<msg timestamp="20230416 22:49:07.151" level="INFO">Connection died as expected</msg>
+<msg timestamp="20230416 22:49:07.151" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20230416 22:49:07.153" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20230416 22:49:04.449" endtime="20230416 22:49:07.153"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:11.684" endtime="20230405 09:06:14.413"/>
+<status status="PASS" starttime="20230416 22:49:02.433" endtime="20230416 22:49:07.153"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:07.012" endtime="20230405 09:06:14.413"/>
+<status status="PASS" starttime="20230416 22:48:01.850" endtime="20230416 22:49:07.153"/>
+</test>
+<test id="s1-t3" name="Entrer dans le chat [connexion impossible]" line="33">
+<kw name="Entrer dans le chat [connexion impossible]" library="chat_test_CU-5c.v1.0">
+<arg>${ip3}</arg>
+<arg>${port3}</arg>
+<kw name="L'utilisateur lance l'éxecution du composant Felix" library="chat_test_CU-5c.v1.0">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20230416 22:49:07.155" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:49:07.155" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:49:07.155" level="INFO">-javaagent:"C:\Users\Younes\Documents\jar\remoteswinglibrary-2.3.2.jar"=127.0.0.1:61846</msg>
+<msg timestamp="20230416 22:49:07.155" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20230416 22:49:07.158" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20230416 22:49:09.726" level="INFO">connecting to started application at 127.0.0.1:61908</msg>
+<msg timestamp="20230416 22:49:09.726" level="INFO">waiting for api at 127.0.0.1:61908</msg>
+<msg timestamp="20230416 22:49:09.835" level="INFO">api is ready</msg>
+<msg timestamp="20230416 22:49:09.835" level="INFO">connected to started application at 127.0.0.1:61908</msg>
+<msg timestamp="20230416 22:49:09.836" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20230416 22:49:07.154" endtime="20230416 22:49:09.836"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:11.845" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:09.836" endtime="20230416 22:49:11.845"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:07.154" endtime="20230416 22:49:11.845"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="chat_test_CU-5c.v1.0">
+<kw name="Window Should Be Open" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" starttime="20230416 22:49:11.846" endtime="20230416 22:49:12.302"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:11.845" endtime="20230416 22:49:12.302"/>
+</kw>
+<kw name="L'utilisateur change l'adresse IP" library="chat_test_CU-5c.v1.0">
+<arg>${ip}</arg>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:49:12.303" endtime="20230416 22:49:12.310"/>
+</kw>
+<kw name="Click On Component" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" starttime="20230416 22:49:12.310" endtime="20230416 22:49:12.343"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:13.357" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:49:12.343" endtime="20230416 22:49:13.357"/>
+</kw>
+<kw name="Focus To Component" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" starttime="20230416 22:49:13.357" endtime="20230416 22:49:13.363"/>
+</kw>
+<kw name="Insert Into Text Field" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" starttime="20230416 22:49:13.363" endtime="20230416 22:49:13.387"/>
+</kw>
+<kw name="Send Keyboard Event" library="RemoteSwingLibrary">
+<arg>VK_ENTER</arg>
+<doc>Sends keystrokes to the currently selected component.
+Keystroke codes must be one of the mappings in ``abbot.tester.KeyStrokeMap`` (https://sourceforge.net/p/abbot/svn/1214/tree/trunk/abbot/src/abbot/tester/KeyStrokeMap.java#l110).
+Constants from ``java.awt.event.InputEvent`` can be used as optional modifiers.</doc>
+<status status="PASS" starttime="20230416 22:49:13.388" endtime="20230416 22:49:13.395"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:14.398" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:49:13.395" endtime="20230416 22:49:14.398"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:12.302" endtime="20230416 22:49:14.398"/>
+</kw>
+<kw name="L'utilisateur change le port" library="chat_test_CU-5c.v1.0">
+<arg>${port}</arg>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:49:14.399" endtime="20230416 22:49:14.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:16.420" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:14.404" endtime="20230416 22:49:16.420"/>
+</kw>
+<kw name="Focus To Component" library="RemoteSwingLibrary">
+<arg>Port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" starttime="20230416 22:49:16.420" endtime="20230416 22:49:16.426"/>
+</kw>
+<kw name="Insert Into Text Field" library="RemoteSwingLibrary">
+<arg>Port</arg>
+<arg>${port}</arg>
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" starttime="20230416 22:49:16.426" endtime="20230416 22:49:16.434"/>
+</kw>
+<kw name="Send Keyboard Event" library="RemoteSwingLibrary">
+<arg>VK_ENTER</arg>
+<doc>Sends keystrokes to the currently selected component.
+Keystroke codes must be one of the mappings in ``abbot.tester.KeyStrokeMap`` (https://sourceforge.net/p/abbot/svn/1214/tree/trunk/abbot/src/abbot/tester/KeyStrokeMap.java#l110).
+Constants from ``java.awt.event.InputEvent`` can be used as optional modifiers.</doc>
+<status status="PASS" starttime="20230416 22:49:16.434" endtime="20230416 22:49:16.440"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:18.449" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:16.440" endtime="20230416 22:49:18.449"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:14.398" endtime="20230416 22:49:18.449"/>
+</kw>
+<kw name="L'utilisateur demande à se connecter" library="chat_test_CU-5c.v1.0">
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:49:18.450" endtime="20230416 22:49:18.455"/>
+</kw>
+<kw name="Push Button" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<status status="PASS" starttime="20230416 22:49:18.455" endtime="20230416 22:49:18.483"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:20.494" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:18.483" endtime="20230416 22:49:20.494"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:18.449" endtime="20230416 22:49:20.495"/>
+</kw>
+<kw name="Felix affiche un message d'erreur de connexion" library="chat_test_CU-5c.v1.0">
+<arg>${ip}</arg>
+<arg>${port}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:26.499" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:20.495" endtime="20230416 22:49:26.499"/>
+</kw>
+<kw name="Get Text Field Value" library="RemoteSwingLibrary">
+<var>${informations}</var>
+<arg>Information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<msg timestamp="20230416 22:49:26.511" level="INFO">${informations} = Connexion au chat @10.0.0.2:8888 impossible</msg>
+<status status="PASS" starttime="20230416 22:49:26.499" endtime="20230416 22:49:26.511"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${informations}</arg>
+<arg>Connexion au chat @${ip}:${port} impossible</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230416 22:49:26.511" endtime="20230416 22:49:26.511"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:20.495" endtime="20230416 22:49:26.511"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:07.154" endtime="20230416 22:49:26.511"/>
+</kw>
+<kw name="Entrer dans le chat [connexion impossible]" library="chat_test_CU-5c.v1.0">
+<arg>${ip4}</arg>
+<arg>${port4}</arg>
+<kw name="L'utilisateur lance l'éxecution du composant Felix" library="chat_test_CU-5c.v1.0">
+<kw name="Start Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<arg>java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</arg>
+<arg>stdout=/dev/null</arg>
+<arg>stderr=/dev/null</arg>
+<doc>Starts the process in the ``command`` parameter  on the host operating system.
+        The given ``alias`` is stored to identify the started application in RemoteSwingLibrary.</doc>
+<msg timestamp="20230416 22:49:26.512" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stdout&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:49:26.512" level="INFO" html="true">&lt;a href="/dev/null"&gt;Link to stderr&lt;/a&gt;</msg>
+<msg timestamp="20230416 22:49:26.513" level="INFO">-javaagent:"C:\Users\Younes\Documents\jar\remoteswinglibrary-2.3.2.jar"=127.0.0.1:61846</msg>
+<msg timestamp="20230416 22:49:26.513" level="INFO">Java version &gt; 9: True</msg>
+<msg timestamp="20230416 22:49:26.516" level="INFO">Starting process:
+java -Duser.language=fr -Duser.country=FR -jar SUT/Felix-0.4.3.jar</msg>
+<msg timestamp="20230416 22:49:29.053" level="INFO">connecting to started application at 127.0.0.1:61926</msg>
+<msg timestamp="20230416 22:49:29.053" level="INFO">waiting for api at 127.0.0.1:61926</msg>
+<msg timestamp="20230416 22:49:29.149" level="INFO">api is ready</msg>
+<msg timestamp="20230416 22:49:29.150" level="INFO">connected to started application at 127.0.0.1:61926</msg>
+<msg timestamp="20230416 22:49:29.150" level="INFO" html="true">&lt;b&gt;Messages by 'RemoteSwingLibrary registration server thread'&lt;/b&gt;</msg>
+<status status="PASS" starttime="20230416 22:49:26.512" endtime="20230416 22:49:29.151"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:31.163" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:29.151" endtime="20230416 22:49:31.163"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:26.512" endtime="20230416 22:49:31.164"/>
+</kw>
+<kw name="Felix affiche la vue connexion" library="chat_test_CU-5c.v1.0">
+<kw name="Window Should Be Open" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Fails if the window is not open.</doc>
+<status status="PASS" starttime="20230416 22:49:31.164" endtime="20230416 22:49:31.555"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:31.164" endtime="20230416 22:49:31.555"/>
+</kw>
+<kw name="L'utilisateur change l'adresse IP" library="chat_test_CU-5c.v1.0">
+<arg>${ip}</arg>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:49:31.555" endtime="20230416 22:49:31.561"/>
+</kw>
+<kw name="Click On Component" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Clicks on a component, optionally using click count, a specific mouse button and keyboard modifiers.</doc>
+<status status="PASS" starttime="20230416 22:49:31.561" endtime="20230416 22:49:31.595"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:32.604" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:49:31.595" endtime="20230416 22:49:32.604"/>
+</kw>
+<kw name="Focus To Component" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" starttime="20230416 22:49:32.604" endtime="20230416 22:49:32.612"/>
+</kw>
+<kw name="Insert Into Text Field" library="RemoteSwingLibrary">
+<arg>IP</arg>
+<arg>${ip}</arg>
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" starttime="20230416 22:49:32.612" endtime="20230416 22:49:32.633"/>
+</kw>
+<kw name="Send Keyboard Event" library="RemoteSwingLibrary">
+<arg>VK_ENTER</arg>
+<doc>Sends keystrokes to the currently selected component.
+Keystroke codes must be one of the mappings in ``abbot.tester.KeyStrokeMap`` (https://sourceforge.net/p/abbot/svn/1214/tree/trunk/abbot/src/abbot/tester/KeyStrokeMap.java#l110).
+Constants from ``java.awt.event.InputEvent`` can be used as optional modifiers.</doc>
+<status status="PASS" starttime="20230416 22:49:32.633" endtime="20230416 22:49:32.641"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:33.650" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230416 22:49:32.641" endtime="20230416 22:49:33.650"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:31.555" endtime="20230416 22:49:33.650"/>
+</kw>
+<kw name="L'utilisateur change le port" library="chat_test_CU-5c.v1.0">
+<arg>${port}</arg>
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:49:33.651" endtime="20230416 22:49:33.657"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:35.671" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:33.657" endtime="20230416 22:49:35.671"/>
+</kw>
+<kw name="Focus To Component" library="RemoteSwingLibrary">
+<arg>Port</arg>
+<doc>Sets focus to the component.
+Useful for example when sending keyboard events to a component.</doc>
+<status status="PASS" starttime="20230416 22:49:35.671" endtime="20230416 22:49:35.677"/>
+</kw>
+<kw name="Insert Into Text Field" library="RemoteSwingLibrary">
+<arg>Port</arg>
+<arg>${port}</arg>
+<doc>Inserts text into a text component (e.g. text field, password field, text area).</doc>
+<status status="PASS" starttime="20230416 22:49:35.677" endtime="20230416 22:49:35.685"/>
+</kw>
+<kw name="Send Keyboard Event" library="RemoteSwingLibrary">
+<arg>VK_ENTER</arg>
+<doc>Sends keystrokes to the currently selected component.
+Keystroke codes must be one of the mappings in ``abbot.tester.KeyStrokeMap`` (https://sourceforge.net/p/abbot/svn/1214/tree/trunk/abbot/src/abbot/tester/KeyStrokeMap.java#l110).
+Constants from ``java.awt.event.InputEvent`` can be used as optional modifiers.</doc>
+<status status="PASS" starttime="20230416 22:49:35.685" endtime="20230416 22:49:35.691"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:37.693" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:35.691" endtime="20230416 22:49:37.693"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:33.651" endtime="20230416 22:49:37.693"/>
+</kw>
+<kw name="L'utilisateur demande à se connecter" library="chat_test_CU-5c.v1.0">
+<kw name="Select Window" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Selects a window as current context and sets focus to it.</doc>
+<status status="PASS" starttime="20230416 22:49:37.693" endtime="20230416 22:49:37.701"/>
+</kw>
+<kw name="Push Button" library="RemoteSwingLibrary">
+<arg>Connexion</arg>
+<doc>Uses current context to search for a button and when found, pushes it.</doc>
+<status status="PASS" starttime="20230416 22:49:37.701" endtime="20230416 22:49:37.726"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:39.737" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:37.726" endtime="20230416 22:49:39.737"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:37.693" endtime="20230416 22:49:39.737"/>
+</kw>
+<kw name="Felix affiche un message d'erreur de connexion" library="chat_test_CU-5c.v1.0">
+<arg>${ip}</arg>
+<arg>${port}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:45.750" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:39.737" endtime="20230416 22:49:45.750"/>
+</kw>
+<kw name="Get Text Field Value" library="RemoteSwingLibrary">
+<var>${informations}</var>
+<arg>Information</arg>
+<doc>Returns the value of a text component (e.g. text field, password field, text area).</doc>
+<msg timestamp="20230416 22:49:45.759" level="INFO">${informations} = Connexion au chat @172.16.0.1:80 impossible</msg>
+<status status="PASS" starttime="20230416 22:49:45.750" endtime="20230416 22:49:45.759"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${informations}</arg>
+<arg>Connexion au chat @${ip}:${port} impossible</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230416 22:49:45.759" endtime="20230416 22:49:45.761"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:39.737" endtime="20230416 22:49:45.761"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:26.511" endtime="20230416 22:49:45.761"/>
+</kw>
+<kw name="Arrêt Felix" library="chat_test_CU-5c.v1.0" type="TEARDOWN">
+<kw name="Switch To Application" library="RemoteSwingLibrary">
+<arg>Felix</arg>
+<doc>Switches between applications that are known to RemoteSwingLibrary.
+        The application is identified using the ``alias``.
+        Subsequent keywords will be passed on to this application.</doc>
+<status status="PASS" starttime="20230416 22:49:45.762" endtime="20230416 22:49:45.762"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230416 22:49:47.776" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:49:45.762" endtime="20230416 22:49:47.776"/>
+</kw>
+<kw name="System Exit" library="RemoteSwingLibrary">
+<doc> Uses the RemoteSwingLibrary java agent to call system exit for the current java application.</doc>
+<msg timestamp="20230416 22:49:50.466" level="INFO">Connection died as expected</msg>
+<msg timestamp="20230416 22:49:50.466" level="INFO">Waiting for process to complete.</msg>
+<msg timestamp="20230416 22:49:50.472" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20230416 22:49:47.776" endtime="20230416 22:49:50.472"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:45.761" endtime="20230416 22:49:50.472"/>
+</kw>
+<status status="PASS" starttime="20230416 22:49:07.154" endtime="20230416 22:49:50.472"/>
 </test>
 <kw name="Arrêt Camix" library="chat_test_CU-5c.v1.0" type="TEARDOWN">
 <kw name="Terminate Process" library="Process">
 <arg>Camix</arg>
 <doc>Stops the process gracefully or forcefully.</doc>
-<msg timestamp="20230405 09:06:14.414" level="INFO">Gracefully terminating process.</msg>
-<msg timestamp="20230405 09:06:14.415" level="INFO">Process completed.</msg>
-<status status="PASS" starttime="20230405 09:06:14.414" endtime="20230405 09:06:14.415"/>
+<msg timestamp="20230416 22:49:50.476" level="INFO">Gracefully terminating process.</msg>
+<msg timestamp="20230416 22:50:20.557" level="INFO">Graceful termination failed.</msg>
+<msg timestamp="20230416 22:50:20.557" level="INFO">Forcefully killing process.</msg>
+<msg timestamp="20230416 22:50:20.664" level="INFO">Process completed.</msg>
+<status status="PASS" starttime="20230416 22:49:50.476" endtime="20230416 22:50:20.665"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230405 09:06:16.427" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230405 09:06:14.416" endtime="20230405 09:06:16.427"/>
+<msg timestamp="20230416 22:50:22.674" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230416 22:50:20.665" endtime="20230416 22:50:22.674"/>
 </kw>
-<status status="PASS" starttime="20230405 09:06:14.414" endtime="20230405 09:06:16.428"/>
+<status status="PASS" starttime="20230416 22:49:50.473" endtime="20230416 22:50:22.674"/>
 </kw>
-<status status="PASS" starttime="20230405 09:05:49.910" endtime="20230405 09:06:16.428"/>
+<status status="PASS" starttime="20230416 22:47:30.223" endtime="20230416 22:50:22.674"/>
 </suite>
 <statistics>
 <total>

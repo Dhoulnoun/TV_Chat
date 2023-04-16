@@ -9,7 +9,7 @@ Library    RemoteSwingLibrary
 *** Keywords ***
 
 Exécution Camix
-    Start Process    java   -Duser.language\=fr  -Duser.country\=FR   -jar SUT/Camix-0.4.3.jar  alias=Camix
+    Start Process    java   -Duser.language\=fr    -Duser.country\=FR   -jar    SUT/Camix-0.4.3.jar    alias=Camix
     Sleep    2s
 
 Arrêt Camix
@@ -18,6 +18,7 @@ Arrêt Camix
 
 Arrêt Felix
     Switch To Application    Felix
+    sleep    2s
     System Exit
 
 L'utilisateur lance l'éxecution du composant Felix
@@ -26,28 +27,59 @@ L'utilisateur lance l'éxecution du composant Felix
     Sleep    2s
 
 Felix affiche la vue connexion
-    log    TODO
+    Window Should Be Open   Connexion
 
 L'utilisateur change l'adresse IP
-    log    TODO
+    [Arguments]    ${ip}
+    Select Window    Connexion
+	Click On Component    IP
+	Sleep    1s
+    Focus To Component    IP
+	Insert Into Text Field    IP    ${ip}
+    Send Keyboard Event    VK_ENTER
+	Sleep    1s
 
 L'utilisateur change le port
-    log    TODO
+    [Arguments]    ${port}
+    Select Window    Connexion
+    sleep    2s
+    Focus To Component    Port
+    Insert Into Text Field    Port    ${port}
+    Send Keyboard Event    VK_ENTER
+    sleep    2s
+
 
 L'utilisateur demande à se connecter
-    log    TODO
+    Select Window    Connexion
+    Push Button    Connexion
+    sleep    2s
 
 Felix affiche un message de connexion
-    log    TODO
+    [Arguments]    ${ip}    ${port}
+    ${informations} =    Get Text Field Value    Information
+    Should Be equal as strings  ${informations}     Connexion au chat @${ip}:${port}
+    sleep    2s
 
 Felix affiche un message d'erreur de connexion
-    log    TODO
+    [Arguments]    ${ip}    ${port}
+    sleep    6s
+    ${informations} =    Get Text Field Value    Information
+    Should Be equal as strings  ${informations}     Connexion au chat @${ip}:${port} impossible
 
 Felix ferme la vue connexion
-    log    TODO
+    Window Should Not Be Open    Connexion
+    Sleep    1s
 
 Felix affiche la vue chat
-    log    TODO
+    Window Should Be Open   Chat
+    Sleep    2s
 
 Felix affiche un message d'accueil dans le chat
-    log    TODO
+    Select Window   Chat
+    ${message} =    Get Text Field Value    Messages
+    Should start with    ${message}    * Taper /h pour avoir de l'aide sur les commandes du chat.
+    sleep    2s
+
+
+
+
