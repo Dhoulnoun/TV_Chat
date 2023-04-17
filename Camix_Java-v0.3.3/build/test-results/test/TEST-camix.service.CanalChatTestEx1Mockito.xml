@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="camix.service.CanalChatTestEx1Mockito" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-16T21:04:11" hostname="DESKTOP-74BNMAN" time="1.053">
+  <properties/>
+  <testcase name="testAjouteClient_present_v3()" classname="camix.service.CanalChatTestEx1Mockito" time="1.053"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
