@@ -1,0 +1,68 @@
+%--------------------------------------
+% Spécifications du chat Felix - Camix
+%
+% CU
+%--------------------------------------
+
+\section{Tests}
+\label{sec:t}
+
+\medskip
+Dans le cadre du projet, nous avons été amenés à réaliser des tests unitaires et des tests d'intégration.
+Ces tests doivent prendre en compte les demandes du client.
+Ainsi que toute mise à jour apportée par ce dernier.
+
+\subsection{Specifications demandée par le client}
+\label{sec:t:specclient}
+
+Vous pourrez retrouver les spécifications demandées par le client dans la section \ref{sec:cu}.
+En revanche dans le cadre du projet, nous avons rédigé des spécifications liées à l'entrée dans le chat en fonction de la mise à jour du client.
+
+
+\subsection{Entrer dans le chat - MIS A JOUR}
+\label{sec:t:entrerchat}
+
+\noindent
+Cas d'utilisation : Entrer dans le chat.\\
+Résumé : Un utilisateur entre dans le chat en lançant le logiciel client du chat.\\
+Acteur principal : Utilisateur.\\
+Acteurs secondaires : Les autres utilisateurs du chat.\\
+Pré-conditions : Un logiciel serveur (Camix) est lancé et accessible par le réseau TCP/IP.
+
+\medskip
+\textbf{Spécifications fonctionnelles avec variantes} :
+\begin{enumerate}
+\item L'utilisateur lance l'exécution du composant Felix.
+\item Felix affiche la vue de connexion au chat.
+\item L'utilisateur demande à se connecter.
+\item Felix affiche un message de connexion.
+\item Retour sur le point d'origine. (2)
+    \item Camix inscrit l'utilisateur dans le canal par défaut. (place publique)
+    \item Camix envoie un message d'arrivée à tous les utilisateurs du canal par défaut.
+    \item Chaque composant Felix affiche le message d'arrivée.
+    \item Camix transmet au composant Felix de l'utilisateur un message d'accueil dans le chat.
+    \item Felix ferme la vue de connexion au chat.
+    \item Felix affiche la vue du chat.
+    \item Felix affiche le message d'accueil dans le chat.
+\end{enumerate}
+
+\textbf{Variantes :[Modifications de l'addresse IP du serveur]}
+\begin{enumerate}
+    \item[3.a.1.] L'utilisateur modifie l'adresse IP du serveur.
+    \item[3.a.2.] Retour à l'étape 3. de la spécification fonctionnelle.
+\end{enumerate}
+
+\textbf{Variantes :[Modification du port du serveur]}
+\begin{enumerate}
+    \item[3.b.1.] L'utilisateur modifie le port du serveur.
+    \item[3.b.2.] Retour à l'étape 3. de la spécification fonctionnelle.
+\end{enumerate}
+
+\textbf{Variantes :[Connexion impossible]}
+\begin{enumerate}
+    \item[6.a.1.] Felix affiche un message de connexion impossible.
+    \item[6.a.2.] Retour à l'étape 3. de la spécification fonctionnelle.
+\end{enumerate}
+
+
+
