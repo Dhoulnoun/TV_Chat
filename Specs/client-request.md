@@ -39,20 +39,59 @@ mentionne "Connexion au chat @ADRESSE:PORT impossible.", l'utilisateur
 peut alors changer l'adresse IP et le port de connexion pour tenter une
 nouvelle connexion au chat.
 
+# Specs
+## Entrer dans le chat
+1. L’utilisateur lance l’exécution du composant Felix
+2. Felix affiche la connexion
+3. L'utilisateur demande à se connecter <br>
+[Variante modif IP] 3.1 L'utilisateur modifie l'IP -> 3.2 Va en 3 <br>
+[Variante modif Port] 3.1 L'utilisateur modifie le port -> 3.2 Va en 3
+4. Felix affiche un message de connexion
+5. Felix affiche la connexion
+6. L'utilisateur demande à se connecter.<br>
+[Variante connexion impossible] 6.1 Felix affiche un message de connexion impossible -> Fin
+7. Felix affiche un message de connexion
+8. Felix initie la connexion à Camix.
+9. Camix inscrit l’utilisateur dans le canal par défaut
+10. Felix ferme la vue connexion 
+11. Felix affiche la vue chat
+12. =7.
 
-# II) Sortie du chat
-__________________
+### Scénario nominal
+1. L’utilisateur lance l’exécution du composant Felix
+2. Felix affiche la connexion
+3. L'utilisateur demande à se connecter 
+4. Felix affiche un message de connexion
+5. Felix initie la connexion à Camix.
+6. Camix inscrit l’utilisateur dans le canal par défaut (place publique)
+7. Camix informe les composants Felix des autres utilisateurs inscrits dans le canal par défaut que l'utilisateur arrive dans le chat
+8. Chaque composant Felix concerné affiche un message d’arrivée de l'utilisateur dans le chat
+9. Camix transmet au composant Felix de l'utilisateur un message d'accueil dans le chat
+10. Felix ferme la vue connexion 
+11. Felix affiche la vue chat
+12. Felix affiche un message d'accueil dans le chat
 
-La saisie de la commande "/q" doit permettre de quitter le chat.
-À la réception de cette commande, Camix :
-- retourne le message "* Sortie du chat." au client qui sort du chat ;
-- informe les autres utilisateurs du canal que le client quitte le chat ;
-- désinscrit le client du canal dans lequel il se trouve ;
-- ferme la connexion du client.
+### Variante \[modification de l'adresse IP]\[Modification de port]
+1. L’utilisateur lance l’exécution du composant Felix
+2. Felix affiche la connexion
+3. L'utilisateur modifie l'IP
+4. L'utilisateur modifie le port
+5. L'utilisateur demande à se connecter
+6. Felix affiche un message de connexion
+7. Felix initie la connexion à Camix.
+8. Camix inscrit l’utilisateur dans le canal par défaut (place publique)
+9. Camix informe les composants Felix des autres utilisateurs inscrits dans le canal par défaut que l'utilisateur arrive dans le chat
+10. Chaque composant Felix concerné affiche un message d’arrivée de l'utilisateur dans le chat
+11. Camix transmet au composant Felix de l'utilisateur un message d'accueil dans le chat 
+12. Felix ferme la vue connexion 
+13. Felix affiche la vue chat 
+14. Felix affiche un message d'accueil dans le chat
 
-
---
-Merci,
-
-Cordialement,
-Matthias Brun
+### Variante \[Connexion impossible]
+1. L’utilisateur lance l’exécution du composant Felix
+2. Felix affiche la connexion
+3. L'utilisateur modifie l'IP
+4. L'utilisateur modifie le port
+5. L'utilisateur demande à se connecter
+6. Felix affiche un message de connexion
+7. Felix affiche un message de connexion impossible
