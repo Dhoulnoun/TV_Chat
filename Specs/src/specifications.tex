@@ -1,0 +1,204 @@
+%--------------------------------------
+% Spécifications du chat Felix - Camix
+%--------------------------------------
+
+\documentclass[a4paper,11pt,titlepage]{article}
+
+\usepackage[english,francais]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{xspace, graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pifont}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{color}
+
+%\usepackage{times}
+%\definecolor{grey}{rgb}{0.4,0.4,0.4}
+
+%\usepackage{multicol}
+%\usepackage{pifont}
+
+%------------------------------------
+
+\usepackage{fancyhdr}
+\usepackage{calc}
+
+\pagestyle{fancy}
+
+
+\setlength{\hoffset}{-40pt}
+\setlength{\topmargin}{-25pt}
+\setlength{\headsep}{10pt}
+
+\renewcommand{\headheight}{80pt}
+
+\renewcommand{\headwidth}{450pt}
+\setlength{\textwidth}{450pt}
+\setlength{\textheight}{604pt}
+
+\renewcommand{\footrulewidth}{0.1mm}
+
+\fancyhf{}
+        %\fancyhead[LO]{\bf \includegraphics[width=60pt]{../img/logoeseo.eps} \includegraphics[width=130pt]{../img/logoemn.eps}}
+        \fancyhead[LO]{\bf \includegraphics[width=60pt]{../img/logo_eseo.eps}}
+	\fancyhead[RO]{\bf {\large Logiciel \og Chat \fg\\
+				{\large Spécifications}\\
+				{\small\textit{version du \today}}}}
+        \fancyfoot[LO]{\sl Chat \og Felix - Camix \fg}
+	\fancyfoot[RO]{\thepage/\pageref{LastPage}}
+
+%---------------------------------------
+\lstset{
+	basicstyle=\footnotesize\ttfamily,
+	commentstyle=\small\itshape\color[gray]{0.5},
+	morecomment=[l]Remarque,
+	showlines=false,
+	frame=lines,
+	xleftmargin=4mm,
+	framexleftmargin=4mm,
+	xrightmargin=4mm,
+	framexrightmargin=4mm,
+	framextopmargin=1mm,
+	framexbottommargin=1mm,
+	backgroundcolor=\color[gray]{0.98},
+	rulesep=6pt,
+	captionpos=b,
+	abovecaptionskip=\medskipamount,
+	belowcaptionskip=\bigskipamount,
+	numbers=none,
+	tabsize=4,
+	literate=
+		{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+		{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+		{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+		{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+		{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+		{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+		{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+		{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+		{ã}{{\~a}}1 {Ã}{{\~A}}1 {õ}{{\~o}}1 {Õ}{{\~O}}1
+		{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+		{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+		{€}{{\EUR}}1 {£}{{\pounds}}1
+}
+
+%---------------------------------------
+\setcounter{tocdepth}{3}
+
+%----------------------------------------
+%	DOCUMENT
+%----------------------------------------
+
+\begin{document}
+
+%------- MISE EN PAGE STRICT -----------
+\sloppy%
+
+%---------------------------------------
+\vspace{-2cm}%
+\begin{center}%
+
+\vspace{0.2cm}
+{\Large {\textsc{\bf Logiciel \og Chat \fg}}}
+
+\rule[0.5ex]{0.52\textwidth}{0.1mm}
+
+\vspace{0.2cm}
+{\Large\bf{Spécifications}}
+
+\rule[0.5ex]{0.52\textwidth}{0.1mm}
+\end{center}
+
+\vspace{1cm}
+\begin{tabular}{|p{5cm}|p{9cm}|}
+\hline
+\textbf{Auteur} & \textbf{Contact} \\
+\hline
+Matthias Brun & matthias.brun@eseo.fr\\
+\hline
+\end{tabular}
+
+\vspace{0.5cm}
+\begin{tabular}{|p{5cm}|p{9cm}|}
+\hline
+\textbf{Relecteur} & \textbf{Contact} \\
+\hline
+Camille Constant & camille.constant@eseo.fr\\
+\hline
+\end{tabular}
+
+\vspace{0.5cm}
+\begin{tabular}{|p{5cm}|p{9cm}|}
+	\hline
+	\textbf{Testeurs} & \textbf{Contact} \\
+	\hline
+	Younes Ghoniem & younes.ghoniem@imt-atlantique.net\\
+	\hline
+	Matthieu Schmitz & matthieu.schmitz@imt-atlantique.net\\
+	\hline
+\end{tabular}
+
+\vspace{1cm}
+\begin{tabular}{|p{1.5cm}|p{2cm}|p{10.1cm}|}
+\hline
+\textbf{Version} & \textbf{Date} & \textbf{Commentaire} \\
+\hline
+1.0 & 14/04/2023 & Ajout Specifications; \newline
+			Ajout TU ; \newline
+			Ajout Tests Utilisateurs. \\
+0.6 & 14/02/2022 & Modifications Déploiement ; \newline
+			Modifications IHM messages textuels.\\
+0.5 & 22/01/2018 & Modifications Domaine ; \newline
+			Modifications IHM messages du serveur $\rightarrow$ messages textuels.\\
+0.4 & 19/02/2017 & Ajout Domaine ; \newline
+			Modifications Introduction ; \newline
+			Modifications CU ; \newline
+			Modifications IHM. \\
+0.3 & 13/01/2013 & Ajout CU sortir du chat ; \newline
+			Modification CU lancement client chat $\rightarrow$ entrer dans le chat ; \newline
+			Modifications IHM : Messages du serveur.\\
+0.2 & 09/01/2013 & Ajout CU lancement client chat ; \newline
+			Ajout pré-conditions aux CU ; \newline 
+			Modifications IHM : Messages du serveur.\\
+0.1 & 08/01/2013 & Introduction, Déploiement, CU, IHM.\\
+\hline
+\end{tabular}
+\newpage
+
+%------------------------------- 
+
+\tableofcontents
+% alternative pour réduire l'espacement entre les entrées de la table des matières 
+% (la valeur numérique peut être adaptée au besoin) : 
+%{\setlength{\baselineskip}{0.9\baselineskip}\tableofcontents\par}
+\newpage
+
+%-------------------------------
+
+\input{Introduction}
+\newpage
+
+\input{Deploiement}
+
+\vspace{-0.5cm}
+\input{Domaine}
+\newpage
+
+\input{CU}
+\newpage
+
+\input{IHM}
+\newpage
+
+\input{Tests}
+\newpage
+
+\end{document}
+
+%--- END 
+
+
