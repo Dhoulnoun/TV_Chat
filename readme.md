@@ -10,7 +10,7 @@ Les rapports des tests utilisateurs sont dans le dossier "report".
 
 Le cahier des tests des TU se trouve à la racine du dossier Camix_Java-v0.3.3.
 
-Les Specs du projet sont dans le dossier "specs". Elles contiennent le code source Latex ainsi que le fichier output Specification.pdf.
+Les Specs du projet sont dans le dossier "specs". lire le .md du dossier.
 
 ## Auteurs
 ### Younes Ghoniem & Matthieu Schmitz.
